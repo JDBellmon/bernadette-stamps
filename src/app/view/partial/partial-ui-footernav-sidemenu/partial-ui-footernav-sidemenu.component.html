@@ -1,0 +1,24 @@
+<!-- partial-ui-footernav-sidemenu.component.html -->
+
+<!-- Container for the footer navigation side menu -->
+<nav class="footernavsidemenu-container">
+    <!-- Toggle Button Icon -->
+    <div class="toggle-button" (click)="toggleNav()">
+        <!-- Add toggle button icon here -->
+    </div>
+    
+    <!-- Brand -->
+    <div class="brand" [ngStyle]="customStyles?.brand" *ngIf="isNavVisible">
+        {{ brand }}
+    </div>
+    
+    <!-- Links -->
+    <div class="links" [ngStyle]="customStyles?.links" *ngIf="isNavVisible">
+        <!-- Add links here -->
+    </div>
+    
+    <!-- Search -->
+    <div class="search" [ngStyle]="customStyles?.search" *ngIf="isNavVisible">
+        <!-- Add search bar here -->
+    </div>
+</nav>

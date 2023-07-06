@@ -1,0 +1,12 @@
+<!-- partial-ui-footernav.component.html -->
+
+<!-- Container for the footer navigation -->
+<div class="footernav-container">
+    <!-- Content for large screens -->
+    <app-partial-ui-footernav-lg *ngIf="isLargeScreen; else mediumScreenContent"></app-partial-ui-footernav-lg>
+
+    <!-- Content for medium and small screens -->
+    <ng-template #mediumScreenContent>
+        <app-partial-ui-footernav-md></app-partial-ui-footernav-md>
+    </ng-template>
+</div>

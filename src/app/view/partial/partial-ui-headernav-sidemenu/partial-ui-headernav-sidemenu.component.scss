@@ -1,0 +1,29 @@
+/* partial-ui-headernav-sidemenu.component.scss */
+
+/* Styles for the side navigation menu container */
+.headernav-sidemenu-container {
+    // Add your styles here
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 15px;
+    overflow-y: auto;
+    
+    .brand {
+        // Add styles for brand section
+        background: transparent;
+    }
+
+    .links {
+        // Add styles for links section
+        background: transparent;
+    }
+
+    .search {
+        // Add styles for search section
+        background: transparent;
+    }
+}

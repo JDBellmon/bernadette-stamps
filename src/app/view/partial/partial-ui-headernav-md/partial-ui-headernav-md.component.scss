@@ -1,0 +1,19 @@
+/* partial-ui-headernav-md.component.scss */
+
+/* Styles for the header navigation container on medium screens */
+.headernav-md-container {
+    // Add your styles here
+    display: flex;
+    padding: 20px;
+    background: transparent;
+    
+    .brand {
+        // Add styles for brand section
+        background: transparent;
+    }
+
+    &.open {
+        // Add styles for when the navigation is open
+        flex-direction: column;
+    }
+}

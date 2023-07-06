@@ -1,0 +1,21 @@
+<!-- partial-ui-mainjumbotron.component.html -->
+
+<!-- Container for the main jumbotron -->
+<div class="jumbotron-container">
+    <div *ngIf="isLargeScreen; else mediumScreenContent">
+        <!-- Content for large screens -->
+        <app-partial-ui-mainjumbotron-lg></app-partial-ui-mainjumbotron-lg>
+    </div>
+      
+    <ng-template #mediumScreenContent>
+        <div *ngIf="isMediumScreen; else smallScreenContent">
+            <!-- Content for medium screens -->
+            <app-partial-ui-mainjumbotron-md></app-partial-ui-mainjumbotron-md>
+        </div>
+    </ng-template>
+      
+    <ng-template #smallScreenContent>
+        <!-- Content for small screens -->
+        <app-partial-ui-mainjumbotron-sm></app-partial-ui-mainjumbotron-sm>
+    </ng-template>
+</div>

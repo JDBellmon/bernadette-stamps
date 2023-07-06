@@ -1,0 +1,15 @@
+<!-- partial-ui-headernav.component.html -->
+
+<!-- Container for the header navigation -->
+<div class="headernav-container">
+    <!-- If it's a large screen, display the large screen header navigation -->
+    <ng-container *ngIf="isLargeScreen; else smallScreenTemplate">
+        <app-partial-ui-headernav-lg></app-partial-ui-headernav-lg>
+    </ng-container>
+
+    <!-- If it's not a large screen, check if it's medium or small -->
+    <ng-template #smallScreenTemplate>
+        <app-partial-ui-headernav-md *ngIf="isMediumScreen"></app-partial-ui-headernav-md>
+        <app-partial-ui-headernav-sm *ngIf="!isMediumScreen"></app-partial-ui-headernav-sm>
+    </ng-template>
+</div>

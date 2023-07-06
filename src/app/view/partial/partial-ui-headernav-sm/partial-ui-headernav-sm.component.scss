@@ -1,0 +1,20 @@
+/* partial-ui-headernav-sm.component.scss */
+
+/* Styles for the header navigation container on small screens */
+.headernav-sm-container {
+    // Add your styles here
+    display: flex;
+    padding: 15px;
+    background: transparent;
+    
+    .brand {
+        // Add styles for brand section
+        background: transparent;
+
+    }
+
+    &.open {
+        // Add styles for when the navigation is open
+        flex-direction: column;
+    }
+}

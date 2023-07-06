@@ -1,0 +1,25 @@
+/* partial-ui-headernav-lg.component.scss */
+
+/* Styles for the header navigation container on large screens */
+.headernav-lg-container {
+    // Add your styles here
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: transparent;
+    
+    .brand {
+        // Add styles for brand section
+        background: transparent;
+    }
+
+    .links {
+        // Add styles for links section
+        background: transparent;
+    }
+
+    .search {
+        // Add styles for search section
+        background: transparent;
+    }
+}

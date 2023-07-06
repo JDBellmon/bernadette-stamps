@@ -1,0 +1,17 @@
+<!-- partial-ui-headernav-md.component.html -->
+
+<!-- Container for the header navigation on medium screens -->
+<nav class="headernav-md-container" [class.open]="isNavOpen">
+    <!-- Toggle Button -->
+    <button (click)="toggleNav()">
+        <!-- Add toggle button icon here -->
+    </button>
+
+    <!-- Brand -->
+    <div class="brand">
+        <!-- Add brand content here -->
+    </div>
+
+    <!-- Side Menu -->
+    <app-partial-ui-headernav-sidemenu *ngIf="isNavOpen"></app-partial-ui-headernav-sidemenu>
+</nav>

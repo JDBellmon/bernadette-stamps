@@ -1,0 +1,19 @@
+<!-- partial-ui-footernav-md.component.html -->
+
+<!-- Container for the footer navigation on medium screens -->
+<nav class="footernavmd-container" [ngClass]="{'hidden': !isNavVisible}">
+    <!-- Toggle Button Icon -->
+    <div class="toggle-button" (click)="toggleNav()">
+        <!-- Add toggle button icon here -->
+    </div>
+    
+    <!-- Brand -->
+    <div class="brand" [ngStyle]="customStyles?.brand" *ngIf="isNavVisible">
+        {{ brand }}
+    </div>
+    
+    <!-- Copyrights -->
+    <div class="copyrights" [ngStyle]="customStyles?.copyrights" *ngIf="isNavVisible">
+        {{ copyrights }}
+    </div>
+</nav>
