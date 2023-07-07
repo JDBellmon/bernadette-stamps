@@ -1,24 +1,11 @@
 <!-- partial-ui-headernav-sidemenu.component.html -->
 
-<!-- Container for the side navigation menu -->
-<nav class="headernav-sidemenu-container">
-    <!-- Toggle Button -->
-    <button>
-        <!-- Add toggle button icon here -->
-    </button>
-
-    <!-- Brand -->
-    <div class="brand">
-        <!-- Add brand content here -->
-    </div>
-
-    <!-- Links -->
-    <ul class="links">
-        <!-- Add navigation links here -->
-    </ul>
-
-    <!-- Search -->
-    <div class="search">
-        <!-- Add search bar or icon here -->
-    </div>
-</nav>
+<!-- Container for the side menu navigation -->
+<aside class="headernav-sidemenu-container">
+    <!-- Navigation Links -->
+    <nav class="nav">
+        <div *ngFor="let link of navLinks" class="nav-link">
+            <a [routerLink]="link.url">{{ link.text }}</a>
+        </div>
+    </nav>
+</aside>

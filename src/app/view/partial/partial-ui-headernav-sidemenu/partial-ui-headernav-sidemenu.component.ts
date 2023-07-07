@@ -1,6 +1,7 @@
 // partial-ui-headernav-sidemenu.component.ts
 
 import { Component, OnInit } from '@angular/core';
+import { HEADER_LINKS } from '../../../shared/data/header-links';
 
 @Component({
   selector: 'app-partial-ui-headernav-sidemenu',
@@ -9,13 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartialUiHeadernavSidemenuComponent implements OnInit {
 
-  // Variables for side menu content such as brand, links, search, etc.
-  // You can add more variables as needed.
+  navLinks = HEADER_LINKS;
 
   constructor() { }
 
   ngOnInit(): void {
-    // Initialize variables or fetch data here
   }
 
 }

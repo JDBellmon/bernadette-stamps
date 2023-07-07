@@ -1,17 +1,29 @@
 <!-- partial-ui-headernav-md.component.html -->
 
 <!-- Container for the header navigation on medium screens -->
-<nav class="headernav-md-container" [class.open]="isNavOpen">
-    <!-- Toggle Button -->
-    <button (click)="toggleNav()">
-        <!-- Add toggle button icon here -->
-    </button>
-
+<nav class="headernav-md-container">
     <!-- Brand -->
     <div class="brand">
-        <!-- Add brand content here -->
+        Bernadette<br>Stamps
     </div>
 
-    <!-- Side Menu -->
-    <app-partial-ui-headernav-sidemenu *ngIf="isNavOpen"></app-partial-ui-headernav-sidemenu>
+    <!-- Links -->
+    <div class="links">
+        <a *ngFor="let link of links" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+
+    <!-- Spacer image -->
+    <div>
+        <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+    </div>
+    
+    <!-- More Links -->
+    <div class="more-links">
+        <a *ngFor="let link of moreLinks" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+
+    <!-- Search -->
+    <div class="search">
+        <!-- Add search bar or icon here -->
+    </div>
 </nav>

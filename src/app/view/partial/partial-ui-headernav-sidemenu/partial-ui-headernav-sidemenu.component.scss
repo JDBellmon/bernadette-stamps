@@ -2,28 +2,29 @@
 
 /* Styles for the side navigation menu container */
 .headernav-sidemenu-container {
-    // Add your styles here
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: #444;
     width: 250px;
     height: 100%;
-    background-color: #333;
-    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
     overflow-y: auto;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     
-    .brand {
-        // Add styles for brand section
-        background: transparent;
-    }
+    .nav {
+        display: flex;
+        flex-direction: column;
 
-    .links {
-        // Add styles for links section
-        background: transparent;
-    }
+        .nav-link {
+            padding: 15px 20px;
+            border-bottom: 1px solid #555;
+            text-align: left;
 
-    .search {
-        // Add styles for search section
-        background: transparent;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
     }
 }

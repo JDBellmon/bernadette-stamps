@@ -1,21 +1,18 @@
 // partial-ui-headernav-lg.component.ts
 
 import { Component, OnInit } from '@angular/core';
+import { HEADER_LINKS } from '../../../shared/data/header-links';
 
 @Component({
   selector: 'app-partial-ui-headernav-lg',
   templateUrl: './partial-ui-headernav-lg.component.html',
-  styleUrls: ['./partial-ui-headernav-lg.component.scss']
+  styleUrls: ['./partial-ui-headernav-lg.component.scss'],
 })
 export class PartialUiHeadernavLgComponent implements OnInit {
+  links = HEADER_LINKS.slice(0, 5); // First 5 links
+  moreLinks = HEADER_LINKS.slice(5); // Remaining links
 
-  // Variables for header content such as brand, links, search, etc.
-  // You can add more variables as needed.
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-    // Initialize variables or fetch data here
-  }
-
+  ngOnInit(): void {}
 }

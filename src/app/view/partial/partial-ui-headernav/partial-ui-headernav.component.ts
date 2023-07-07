@@ -1,27 +1,32 @@
 // partial-ui-headernav.component.html
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-partial-ui-headernav',
   templateUrl: './partial-ui-headernav.component.html',
-  styleUrls: ['./partial-ui-headernav.component.scss']
+  styleUrls: ['./partial-ui-headernav.component.scss'],
 })
 export class PartialUiHeadernavComponent implements OnInit {
-
-  // Variables to store the screen size
   isLargeScreen!: boolean;
   isMediumScreen!: boolean;
+  isSmallScreen!: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    // Get the screen width
-    const width = window.innerWidth;
-
-    // Set the screen size variables based on the width
-    this.isLargeScreen = width >= 1280; // Large screen if width is 1280 or more
-    this.isMediumScreen = width >= 800 && width < 1280; // Medium screen if width is between 800 and 1279
+    this.updateScreenSize();
   }
 
+  @HostListener('window:resize')
+  onResize() {
+    this.updateScreenSize();
+  }
+
+  private updateScreenSize(): void {
+    const width = window.innerWidth;
+    this.isLargeScreen = width > 900;
+    this.isMediumScreen = width <= 900 && width > 600;
+    this.isSmallScreen = width <= 600;
+  }
 }

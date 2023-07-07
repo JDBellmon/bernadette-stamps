@@ -1,26 +1,22 @@
 // partial-ui-headernav-sm.component.ts
 
 import { Component, OnInit } from '@angular/core';
+import { HEADER_LINKS } from '../../../shared/data/header-links';
 
 @Component({
   selector: 'app-partial-ui-headernav-sm',
   templateUrl: './partial-ui-headernav-sm.component.html',
-  styleUrls: ['./partial-ui-headernav-sm.component.scss']
+  styleUrls: ['./partial-ui-headernav-sm.component.scss'],
 })
 export class PartialUiHeadernavSmComponent implements OnInit {
+  navLinks = HEADER_LINKS;
+  isNavOpen = false;
 
-  // Variables for header content such as brand, links, search, etc.
-  // You can add more variables as needed.
-  isNavOpen: boolean = false;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-    // Initialize variables or fetch data here
-  }
+  ngOnInit(): void {}
 
   toggleNav(): void {
     this.isNavOpen = !this.isNavOpen;
   }
-
 }

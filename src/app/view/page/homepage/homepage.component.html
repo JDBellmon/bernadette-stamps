@@ -1,8 +1,10 @@
 <!-- homepage.component.html -->
 
-<div class="homepage-container">
-    <app-header></app-header>
-    <app-main></app-main>
-    <app-footer></app-footer>
-  </div>
+<div class="homepage-container" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+  <app-header></app-header>
+  <app-main></app-main>
+  <app-footer></app-footer>
+</div>
+
+  
   

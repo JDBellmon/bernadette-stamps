@@ -1,20 +1,56 @@
 /* partial-ui-headernav-sm.component.scss */
 
-/* Styles for the header navigation container on small screens */
 .headernav-sm-container {
-    // Add your styles here
     display: flex;
-    padding: 15px;
-    background: transparent;
-    
-    .brand {
-        // Add styles for brand section
-        background: transparent;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    color: red;
+    font-family: 'Tangerine', cursive;
+    text-shadow: 1px 1px yellow;
+    width: 100vw;
+    border: 1px solid yellow;
+}
 
-    }
+.brand {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Tangerine', cursive;
+    color: yellow;
+    text-shadow: 5px 5px red;
+    background-image: url('/assets/images/bern35.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin-bottom: 20px; /* Add some margin to separate from the links */
+}
 
-    &.open {
-        // Add styles for when the navigation is open
-        flex-direction: column;
+.toggle-button {
+    cursor: pointer;
+}
+
+.spacer-image {
+    height: 3rem;
+    width: auto;
+    margin-bottom: 20px; /* Add some margin to separate from the more links */
+    background-color: rgba(128,0,0,1);
+}
+
+.side-menu {
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    .nav-link {
+        padding: 10px 20px;
+        border-bottom: 1px solid #555;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 }

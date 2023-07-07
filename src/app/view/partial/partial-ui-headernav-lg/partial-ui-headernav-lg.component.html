@@ -4,12 +4,22 @@
 <nav class="headernav-lg-container">
     <!-- Brand -->
     <div class="brand">
-        <!-- Add brand content here -->
+        Bernadette<br>Stamps
     </div>
 
     <!-- Links -->
     <div class="links">
-        <!-- Add navigation links here -->
+        <a *ngFor="let link of links" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+
+    <!-- Spacer image -->
+    <div>
+        <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+    </div>
+    
+    <!-- More Links -->
+    <div class="more-links">
+        <a *ngFor="let link of moreLinks" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
     </div>
 
     <!-- Search -->

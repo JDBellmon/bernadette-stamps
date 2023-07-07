@@ -1,17 +1,22 @@
 <!-- partial-ui-headernav-sm.component.html -->
 
 <!-- Container for the header navigation on small screens -->
-<nav class="headernav-sm-container" [class.open]="isNavOpen">
-    <!-- Toggle Button -->
-    <button (click)="toggleNav()">
-        <!-- Add toggle button icon here -->
-    </button>
-
+<nav class="headernav-sm-container">
     <!-- Brand -->
     <div class="brand">
-        <!-- Add brand content here -->
+        Bernadette<br>Stamps
+    </div>
+
+    <!-- Spacer image -->
+    <div class="toggle-button" (click)="toggleNav()">
+        <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
     </div>
 
     <!-- Side Menu -->
-    <app-partial-ui-headernav-sidemenu *ngIf="isNavOpen"></app-partial-ui-headernav-sidemenu>
+    <div class="side-menu" *ngIf="isNavOpen">
+        <!-- Navigation Links -->
+        <div *ngFor="let link of navLinks" class="nav-link">
+            <a [routerLink]="link.url">{{ link.text }}</a>
+        </div>
+    </div>
 </nav>
