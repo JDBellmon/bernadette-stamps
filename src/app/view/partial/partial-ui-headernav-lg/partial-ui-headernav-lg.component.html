@@ -3,11 +3,9 @@
 <!-- Container for the header navigation on large screens -->
 <nav class="headernav-lg-container">
     <!-- Brand -->
-<!-- partial-ui-headernav-lg.component.html -->
-
-<div class="brand" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
-    Bernadette<br>Stamps
-</div>
+    <div class="brand" [style.background-image]="backgroundImage">
+        Bernadette<br>Stamps
+    </div>
   
     <!-- Links -->
     <div class="links">
@@ -15,8 +13,10 @@
     </div>
 
     <!-- Spacer image -->
-    <div>
-        <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+    <div class="spacer">
+        <a [routerLink]="['/']">
+            <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+        </a>
     </div>
     
     <!-- More Links -->

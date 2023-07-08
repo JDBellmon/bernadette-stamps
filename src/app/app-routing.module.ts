@@ -34,7 +34,7 @@ const routes: Routes = [
       author: 'Author Name',
       publishDate: '2023-07-06',
       isFeatured: true,
-      backgroundImage: 'assets/images/bern35.png',
+      backgroundImage: '/assets/images/bern35.png',
       customStyles: {
         color: 'red',
         fontSize: '20px'

@@ -1,6 +1,5 @@
-// Filename: entrepreneur.component.ts
+// entrepreneur.component.ts
 
-// Import necessary modules
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Meta } from '@angular/platform-browser';
@@ -12,9 +11,11 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./entrepreneur.component.scss'], // The location of the component's private CSS styles.
 })
 export class EntrepreneurComponent implements OnInit {
-  // Inject ActivatedRoute and Meta into the constructor
-  constructor(private route: ActivatedRoute, private meta: Meta) {}
+    // Inject ActivatedRoute and Meta into the constructor
+    constructor(private route: ActivatedRoute, private meta: Meta) { }
 
-  // ngOnInit is a lifecycle hook that is called once the component is initialized
-  ngOnInit(): void {}
+    // ngOnInit is a lifecycle hook that is called once the component is initialized
+    ngOnInit(): void {
+
+    }
 }
