@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
-import { ServiceImageService } from '../../../shared/service-image.service';
-import { Subscription } from 'rxjs';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+// partial-ui-headernav-lg.component.ts
+
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HEADER_LINKS } from '../../../shared/data/header-links';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-partial-ui-headernav-lg',
@@ -10,23 +10,35 @@ import { HEADER_LINKS } from '../../../shared/data/header-links';
   styleUrls: ['./partial-ui-headernav-lg.component.scss']
 })
 export class PartialUiHeadernavLgComponent implements OnInit, OnDestroy {
-  backgroundImage!: SafeStyle;
-  subscription!: Subscription;
+  activePageRoute!: string;
+  backgroundImage!: string;
   links = HEADER_LINKS.slice(0, 5); // First 5 links
   moreLinks = HEADER_LINKS.slice(5); // Remaining links
 
-  constructor(private serviceImage: ServiceImageService, private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.subscription = this.serviceImage.backgroundImage$.subscribe(
-      backgroundImage => {
-        this.backgroundImage = this.sanitizer.bypassSecurityTrustStyle('url(' + backgroundImage + ')');
-        this.cdr.detectChanges();
+    this.route.url.subscribe(url => {
+      if (!url.length) {
+        this.activePageRoute = "The Lady";
+      } else {
+        this.activePageRoute = url.join('/');
       }
-    );
+
+      // Find the link object that corresponds to the active route
+      const activeLink = [...this.links, ...this.moreLinks].find(link => link.url === '/' + this.activePageRoute);
+
+      // If a link object was found, set the backgroundImage property
+      if (activeLink) {
+        this.backgroundImage = activeLink.backgroundImage;
+      }
+      else {
+        this.backgroundImage = '/assets/images/bern35.png';
+      }
+    });
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    // Cleanup code here
   }
 }

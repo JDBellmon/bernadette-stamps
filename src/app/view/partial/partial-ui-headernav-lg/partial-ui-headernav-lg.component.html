@@ -3,9 +3,9 @@
 <!-- Container for the header navigation on large screens -->
 <nav class="headernav-lg-container">
     <!-- Brand -->
-    <div class="brand" [style.background-image]="backgroundImage">
-        Bernadette<br>Stamps
-    </div>
+    <div class="brand" [style.background-image]="'url(' + backgroundImage + ')'">
+        Bernadette<br>Stamps<br><span class="activePageRoute">{{ activePageRoute }}</span>
+    </div>            
   
     <!-- Links -->
     <div class="links">
@@ -27,5 +27,6 @@
     <!-- Search -->
     <div class="search">
         <!-- Add search bar or icon here -->
+        (testing) BG = {{ backgroundImage }}
     </div>
 </nav>

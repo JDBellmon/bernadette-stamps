@@ -27,6 +27,16 @@
     padding: 25px;
 }
 
+.activePageRoute{
+    border: 1px solid yellow;
+    border-radius: 100px;
+    padding: 8px;
+    text-transform: capitalize;
+    background-color: rgba(128,0,0,1);
+    color: yellow;
+    text-shadow: 5px 5px red;
+}
+
 .links {
     display: flex;
     flex-wrap: wrap;
