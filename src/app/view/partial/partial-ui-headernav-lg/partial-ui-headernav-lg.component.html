@@ -3,10 +3,12 @@
 <!-- Container for the header navigation on large screens -->
 <nav class="headernav-lg-container">
     <!-- Brand -->
-    <div class="brand">
-        Bernadette<br>Stamps
-    </div>
+<!-- partial-ui-headernav-lg.component.html -->
 
+<div class="brand" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+    Bernadette<br>Stamps
+</div>
+  
     <!-- Links -->
     <div class="links">
         <a *ngFor="let link of links" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>

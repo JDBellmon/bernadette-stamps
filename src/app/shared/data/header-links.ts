@@ -1,7 +1,5 @@
 // header-links.ts
 
-// header-links.ts
-
 export const HEADER_LINKS = [
     { text: 'Bernadette', url: '/' },
     { text: 'Entrepreneur', url: '/entrepreneur' },
