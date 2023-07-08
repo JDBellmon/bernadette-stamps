@@ -9,4 +9,47 @@
     width: 100%;
     padding: 20px;
     background: transparent;
+    max-width: 1280px; /* Set a max-width for the container */
+    margin: auto; /* Center the container */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%; /* Make sure the flex container takes up the full width of its parent */
+    justify-content: center; /* Center the items on the line */
+}
+
+.flex-item {
+    border: 1px solid yellow;
+    border-radius: 100px;
+    padding: 20px; /* Double the padding */
+    width: calc(100% - 40px); /* Full width for small screens, subtracting the margin */
+    height: 400px; /* Double the height */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 20px; /* Double the margin to create space between items */
+}
+
+/* Medium screens (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .flex-item {
+        width: calc(50% - 40px); /* 2 items per row */
+    }
+}
+
+/* Large screens (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .flex-item {
+        width: calc(33.33% - 40px); /* 3 items per row */
+    }
+}
+
+/* Extra large screens (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .flex-item {
+        width: calc(25% - 40px); /* 4 items per row */
+    }
 }

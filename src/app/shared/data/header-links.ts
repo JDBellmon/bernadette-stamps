@@ -4,7 +4,7 @@ export const HEADER_LINKS = [
     { text: 'Bernadette', url: '/', backgroundImage: '/assets/images/bern35.png' },
     { text: 'Entrepreneur', url: '/entrepreneur', backgroundImage: '/assets/images/bern33.png' },
     { text: 'Entertainer', url: '/entertainer', backgroundImage: '/assets/images/bern25.png' },
-    { text: 'Fashionista', url: '/fashionenthusiast', backgroundImage: '/assets/images/bern7.png' },
+    { text: 'Fashionista', url: '/fashionista', backgroundImage: '/assets/images/bern7.png' },
     { text: 'Goddess', url: '/goddess', backgroundImage: '/assets/images/bern57.png' },
     // ... spacer ...
     { text: 'About', url: '/about', backgroundImage: '/assets/images/bern27.png' },
