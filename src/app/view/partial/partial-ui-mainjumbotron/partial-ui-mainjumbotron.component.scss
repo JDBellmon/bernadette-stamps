@@ -1,55 +1,41 @@
-/* partial-ui-mainjumbotron.component.scss */
+// partial-ui-mainjumbotron.component.scss
 
-/* Styles for the main jumbotron container */
 .jumbotron-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    padding: 20px;
-    background: transparent;
-    max-width: 1280px; /* Set a max-width for the container */
-    margin: auto; /* Center the container */
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%; /* Make sure the flex container takes up the full width of its parent */
-    justify-content: center; /* Center the items on the line */
-}
-
-.flex-item {
-    border: 1px solid yellow;
-    border-radius: 100px;
-    padding: 20px; /* Double the padding */
-    width: calc(100% - 40px); /* Full width for small screens, subtracting the margin */
-    height: 400px; /* Double the height */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 20px; /* Double the margin to create space between items */
-}
-
-/* Medium screens (tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .flex-item {
-        width: calc(50% - 40px); /* 2 items per row */
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: yellow;
+    color: red;
+    box-shadow: 0px 0px 10px rgb(100, 0, 0);
+  
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+  
+      .column-one,
+      .column-two {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .column-one {
+        .row-one,
+        .row-two {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+  
+      .column-two {
+        .row-one,
+        .row-two,
+        .row-three,
+        .row-four {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
-}
-
-/* Large screens (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .flex-item {
-        width: calc(33.33% - 40px); /* 3 items per row */
-    }
-}
-
-/* Extra large screens (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .flex-item {
-        width: calc(25% - 40px); /* 4 items per row */
-    }
-}
+  }
+  
