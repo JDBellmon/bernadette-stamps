@@ -1,6 +1,7 @@
 // partial-ui-footernav-lg.component.ts
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HEADER_LINKS } from '../../../shared/data/header-links';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,20 +9,36 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './partial-ui-footernav-lg.component.html',
   styleUrls: ['./partial-ui-footernav-lg.component.scss']
 })
-export class PartialUiFooternavLgComponent implements OnInit {
-  // Variables to hold the brand, copyrights, links, and custom styles
-  brand!: string;
-  copyrights!: string;
-  customStyles: any;
+export class PartialUiFooternavLgComponent  implements OnInit, OnDestroy {
+  activePageRoute!: string;
+  backgroundImage!: string;
+  links = HEADER_LINKS.slice(0, 5); // First 5 links
+  moreLinks = HEADER_LINKS.slice(5); // Remaining links
 
-  // Injecting ActivatedRoute to access route data
   constructor(private route: ActivatedRoute) { }
 
-  // OnInit lifecycle hook to initialize data
   ngOnInit(): void {
-    // Accessing the custom data properties from the route configuration
-    this.brand = this.route.snapshot.data['brand'];
-    this.copyrights = this.route.snapshot.data['copyrights'];
-    this.customStyles = this.route.snapshot.data['customStyles'];
+    this.route.url.subscribe(url => {
+      if (!url.length) {
+        this.activePageRoute = "The Lady";
+      } else {
+        this.activePageRoute = url.join('/');
+      }
+
+      // Find the link object that corresponds to the active route
+      const activeLink = [...this.links, ...this.moreLinks].find(link => link.url === '/' + this.activePageRoute);
+
+      // If a link object was found, set the backgroundImage property
+      if (activeLink) {
+        this.backgroundImage = activeLink.backgroundImage;
+      }
+      else {
+        this.backgroundImage = '/assets/images/bern35.png';
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    // Cleanup code here
   }
 }

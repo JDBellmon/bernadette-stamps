@@ -1,7 +1,12 @@
-/* main.component.scss */
-
 .main-container {
-    /* Add styles for the main container here */
-    background: transparent;
-  }
-  
+  // Make the container take the full width
+  width: 98vw;
+  // Add some padding
+  padding: 20px;
+  // Add a background color
+  // Add a box shadow
+  box-shadow: 0px 0px 10px 0px rgb(100, 0, 0);
+  border: 5px solid yellow;
+  border-radius: 100px;
+
+}

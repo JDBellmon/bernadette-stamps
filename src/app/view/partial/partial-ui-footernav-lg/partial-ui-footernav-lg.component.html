@@ -2,23 +2,49 @@
 
 <!-- Container for the footer navigation on large screens -->
 <nav class="footernavlg-container">
-    <!-- Brand -->
-    <div class="brand" [ngStyle]="customStyles?.brand">
-        {{ brand }}
-    </div>
-    
-    <!-- Copyrights -->
-    <div class="copyrights" [ngStyle]="customStyles?.copyrights">
-        {{ copyrights }}
-    </div>
-    
     <!-- Links -->
-    <div class="links" [ngStyle]="customStyles?.links">
-        <!-- Add links here -->
+    <div class="links">
+        <a *ngFor="let link of links" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
     </div>
-    
+    <!-- Brand -->
+    <div class="brand" [style.background-image]="'url(' + backgroundImage + ')'">
+        Bernadette<br>Stamps<br><span class="activePageRoute">{{ activePageRoute }}</span>
+    </div>
+
+    <!-- Spacer image -->
+    <!-- More Links -->
+    <div class="more-links">
+        <a *ngFor="let link of moreLinks" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+
+    <!-- More Links -->
+    <div class="more-links flex-container flex-column margin-top25">
+        <!-- Copyrights -->
+        <div class="copyrights font-12rem flex-container flex-item-left bg-bernfirebanner" style="margin-top: 100px;">
+            &copy; 2023 Bernadette Stamps
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media font-6rem flex-container flex-item-right flex-row ">
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://www.facebook.com/msburna.monroe333">Facebook</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://twitter.com/bernadettestam6">Twitter</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://www.instagram.com/ms.burnamonroe/">Instagram</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://onlyfans.com/u293124947">OnlyFans</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://youtube.com/c/BurnaMonroe">Youtube</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://open.spotify.com/artist/3cB5xD0mRvTdiuFuX3vWQO">Spotify</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow text-shadow-red"
+                href="https://www.snapchat.com/add/nubian29536">SnapChat</a>&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
     <!-- Search -->
-    <div class="search" [ngStyle]="customStyles?.search">
-        <!-- Add search bar here -->
+    <div class="search">
+        <!-- Add search bar or icon here -->
     </div>
 </nav>

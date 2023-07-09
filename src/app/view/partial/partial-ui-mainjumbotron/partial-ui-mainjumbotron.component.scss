@@ -1,41 +1,25 @@
-// partial-ui-mainjumbotron.component.scss
-
-.jumbotron-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: yellow;
-    color: red;
-    box-shadow: 0px 0px 10px rgb(100, 0, 0);
+.container-fluid {
+  // Make the container take the full width
+  width: 100%;
+  // Add some padding
+  padding: 20px;
+  // Add a background color
+  // Add a box shadow
+  box-shadow: 0px 0px 10px 0px rgb(100, 0, 0);
+  border: 5px solid yellow;
+  border-radius: 100px;
   
-    .flex-container {
-      display: flex;
-      flex-direction: column;
-  
-      .column-one,
-      .column-two {
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .column-one {
-        .row-one,
-        .row-two {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-  
-      .column-two {
-        .row-one,
-        .row-two,
-        .row-three,
-        .row-four {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-    }
+  .jumbotron-container {
+    // Use flexbox for layout
+    display: flex;
+    // Align items in the center
+    align-items: center;
+    // Justify content in the center
+    justify-content: center;
+    // Add some margin
+    margin: 20px;
+    // Add a background color
+    // Add a box shadow
+    box-shadow: 0px 0px 10px 0px rgb(100, 0, 0);
   }
-  
+}

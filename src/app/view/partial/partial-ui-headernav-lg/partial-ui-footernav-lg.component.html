@@ -1,0 +1,54 @@
+<!-- partial-ui-footernav-lg.component.html -->
+
+<!-- Container for the footer navigation on large screens -->
+<nav class="footernavlg-container">
+    <!-- Brand -->
+    <div class="brand" [style.background-image]="'url(' + backgroundImage + ')'">
+        Bernadette<br>Stamps<br><span class="activePageRoute">{{ activePageRoute }}</span>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+        <a *ngFor="let link of links" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+
+    <!-- Spacer image -->
+    <div class="spacer">
+        <a [routerLink]="['/']">
+            <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+        </a>
+    </div>
+
+    <!-- More Links -->
+    <div class="more-links">
+        <a *ngFor="let link of moreLinks" [routerLink]="link.url" class="nav-link">{{ link.text }}</a>
+    </div>
+    <!-- Spacer image -->
+    <div class="spacer">
+        <a [routerLink]="['/']">
+            <img src="/assets/images/bernfirebanner.png" alt="" class="spacer-image">
+        </a>
+    </div>
+    <!-- More Links -->
+    <div class="more-links flex-container flex-column">
+        <!-- Copyrights -->
+        <div class="copyrights font-12rem flex-container flex-item-left">
+            &copy; 2023 Bernadette Stamps
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media font-6rem flex-container flex-item-right flex-row">
+            <a target="_blank" class="link-yellow" href="https://www.facebook.com/msburna.monroe333">Facebook</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow" href="https://twitter.com/bernadettestam6">Twitter</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow" href="https://www.instagram.com/ms.burnamonroe/">Instagram</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow" href="https://onlyfans.com/u293124947">OnlyFans</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow" href="https://youtube.com/c/BurnaMonroe">Youtube</a>&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="link-yellow" href="https://open.spotify.com/artist/3cB5xD0mRvTdiuFuX3vWQO">Spotify</a>&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- Search -->
+    <div class="search">
+        <!-- Add search bar or icon here -->
+    </div>
+</nav>

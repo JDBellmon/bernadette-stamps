@@ -1,7 +1,7 @@
 // header-links.ts
 
 export const HEADER_LINKS = [
-    { text: 'Bernadette', url: '/', backgroundImage: '/assets/images/bern35.png' },
+    { text: 'Bernadette', url: '/bernadette', backgroundImage: '/assets/images/bern35.png' },
     { text: 'Entrepreneur', url: '/entrepreneur', backgroundImage: '/assets/images/bern33.png' },
     { text: 'Entertainer', url: '/entertainer', backgroundImage: '/assets/images/bern25.png' },
     { text: 'Fashionista', url: '/fashionista', backgroundImage: '/assets/images/bern7.png' },

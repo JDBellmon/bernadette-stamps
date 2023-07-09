@@ -1,12 +1,15 @@
 <!-- partial-ui-mainjumbotron.component.html -->
 
 <!-- Container for the main jumbotron -->
-<div class="jumbotron-container">
+<div class="jumbotron-container container-fluid">
     <div class="flex-container">
         <!-- partial-ui-mainjumbotron.component.html -->
         <!-- Container for the main jumbotron -->
         <div class="jumbotron-container">
             <div class="flex-container">
+                <!-- if active route is 'homepage' show partial-main-homepage -->
+                <app-partial-main-homepage *ngIf="activeLink.url === '/'"></app-partial-main-homepage>
+
                 <!-- if active route is 'about' show partial-main-about -->
                 <app-partial-main-about *ngIf="activeLink.url === '/about'"></app-partial-main-about>
 
@@ -21,6 +24,9 @@
 
                 <!-- if active route is 'contact' show partial-main-contact -->
                 <app-partial-main-contact *ngIf="activeLink.url === '/contact'"></app-partial-main-contact>
+
+                <!-- if active route is 'entrepreneur' show partial-main-entrepreneur -->
+                <app-partial-main-entrepreneur *ngIf="activeLink.url === '/entrepreneur'"></app-partial-main-entrepreneur>
 
                 <!-- if active route is 'entertainer' show partial-main-entertainer -->
                 <app-partial-main-entertainer *ngIf="activeLink.url === '/entertainer'"></app-partial-main-entertainer>
@@ -46,11 +52,12 @@
                 <!-- if active route is 'services' show partial-main-services -->
                 <app-partial-main-services *ngIf="activeLink.url === '/services'"></app-partial-main-services>
 
+                <!-- if active route is 'events' show partial-main-events -->
+                <app-partial-main-events *ngIf="activeLink.url === '/events'"></app-partial-main-events>
+
                 <!-- if active route is 'tarot' show partial-main-tarot -->
                 <app-partial-main-tarot *ngIf="activeLink.url === '/tarot'"></app-partial-main-tarot>
             </div>
         </div>
-
-
     </div>
 </div>

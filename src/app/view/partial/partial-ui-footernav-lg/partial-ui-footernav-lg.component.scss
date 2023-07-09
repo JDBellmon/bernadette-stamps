@@ -1,26 +1,164 @@
-/** partial-ui-footernav-lg.component.scss **/
+/* partial-ui-headernav-lg.component.scss */
 
-.footernavlg-container {
-    /** Add your styles for the container here **/
-    background: transparent;
+.headernav-lg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  color: red;
+  font-family: 'Tangerine', cursive;
+  text-shadow: 1px 1px yellow;
+  width: 100vw;
 }
 
 .brand {
-    /** Add your styles for the brand here **/
-    background: transparent;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Tangerine', cursive;
+  color: yellow;
+  text-shadow: 5px 5px red;
+  text-align: center ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px; /* Add some margin to separate from the links */
+  border: 1px solid yellow;
+  border-radius: 100px;
+  padding: 25px;
 }
 
-.copyrights {
-    /** Add your styles for the copyrights here **/
-    background: transparent;
+.activePageRoute{
+  border: 1px solid yellow;
+  border-radius: 100px;
+  padding: 8px;
+  text-transform: capitalize;
+  background-color: rgba(128,0,0,1);
+  color: yellow;
+  text-shadow: 5px 5px red;
 }
 
 .links {
-    /** Add your styles for the links here **/
-    background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add some margin to separate from the spacer image */
+  background-color: rgba(128,0,0,1);
+  border: 1px solid yellow;
+  border-radius: 100px;
+
+
+  .nav-link {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2.5rem;
+      font-family: 'Tangerine', cursive;
+      color: yellow;
+      text-shadow: 5px 5px red;
+      
+      &:hover {
+          text-decoration: underline;
+      }
+  }
+}
+
+.bg-bernfirebanner{
+background-image: url('/assets/images/bernfirebanner.png');
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.margin-top25{
+  margin-top: 25px;
+}
+
+.text-shadow-red{
+  text-shadow: 5px 5px red;
+}
+
+.text-shadow-yellow{
+  text-shadow: 5px 5px yellow;
+}
+
+.copyrights {
+margin-top: 100px;
+text-shadow: 5px 5px yellow;
+}
+
+.font-6rem{
+font-size: 6rem;
+}
+.font-10rem{
+font-size: 10rem;
+}
+.font-12rem{
+font-size: 12rem;
+}
+.flex-container {
+display: flex;
+flex-basis: 50px;
+padding: 10px;
+}
+.flex-row{
+flex-direction: row;
+}
+.flex-column{
+flex-direction: column;
+}
+
+.flex-item-left {
+flex: 50%;
+}
+
+.flex-item-right {
+flex: 50%;
+}
+.link-yellow{
+color: yellow;
+}
+
+.spacer{
+  background: transparent;
+  margin: auto;
+}
+.spacer-image {
+  height: 3rem;
+  width: auto;
+  margin-bottom: 20px; /* Add some margin to separate from the more links */
+  background-color: rgba(128,0,0,1);
+  border: 1px solid yellow;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.more-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(128,0,0,1);
+  border: 1px solid yellow;
+  border-radius: 100px;
+
+  .nav-link {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2rem;
+      font-family: 'Tangerine', cursive;
+      color: yellow;
+      text-shadow: 5px 5px red;
+      
+      &:hover {
+          text-decoration: underline;
+      }
+  }
 }
 
 .search {
-    /** Add your styles for the search bar here **/
-    background: transparent;
+  input {
+      padding: 5px;
+      border: 1px solid yellow;
+  }
 }
