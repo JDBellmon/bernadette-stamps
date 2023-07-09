@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bernadette-stamps": {
+      "hosting": {
+        "bernadette-stamps": [
+          "bernadette-stamps"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bernadette-stamps"
+  }
+}

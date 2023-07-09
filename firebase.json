@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "bernadette-stamps",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

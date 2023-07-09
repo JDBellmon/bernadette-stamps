@@ -1,0 +1,186 @@
+[debug] [2023-07-08T10:52:44.366Z] ----------------------------------------------------------------------
+[debug] [2023-07-08T10:52:44.367Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jdbel\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-07-08T10:52:44.367Z] CLI Version:   12.4.3
+[debug] [2023-07-08T10:52:44.368Z] Platform:      win32
+[debug] [2023-07-08T10:52:44.368Z] Node Version:  v18.16.1
+[debug] [2023-07-08T10:52:44.369Z] Time:          Sat Jul 08 2023 06:52:44 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-07-08T10:52:44.369Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-08T10:52:44.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-08T10:52:44.375Z] > authorizing via signed-in user (jdbellmon.tech@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\_DEV\bernadette\www\bernadette-stamps
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-07-08T10:53:12.062Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-07-08T10:53:12.540Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-07-08T10:53:12.540Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project bernadette-stamps (Bernadette Stamps) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-07-08T10:53:13.729Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-07-08T10:53:13.729Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:14.132Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firebasedatabase.googleapis.com 200
+[debug] [2023-07-08T10:53:14.132Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-07-08T10:53:14.133Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/bernadette-stamps/locations/-/instances/bernadette-stamps-default-rtdb [none]
+[debug] [2023-07-08T10:53:14.484Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/bernadette-stamps/locations/-/instances/bernadette-stamps-default-rtdb 200
+[debug] [2023-07-08T10:53:14.485Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/bernadette-stamps/locations/-/instances/bernadette-stamps-default-rtdb {"name":"projects/654266034286/locations/us-central1/instances/bernadette-stamps-default-rtdb","project":"projects/654266034286","databaseUrl":"https://bernadette-stamps-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-07-08T10:53:28.570Z] >>> [apiv2][query] GET https://bernadette-stamps-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2023-07-08T10:53:28.780Z] <<< [apiv2][status] GET https://bernadette-stamps-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-07-08T10:53:28.780Z] <<< [apiv2][body] GET https://bernadette-stamps-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for bernadette-stamps-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2023-07-08T10:53:28.786Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firestore.googleapis.com [none]
+[debug] [2023-07-08T10:53:28.786Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firestore.googleapis.com x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:29.217Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firestore.googleapis.com 200
+[debug] [2023-07-08T10:53:29.218Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/firestore.googleapis.com [omitted]
+[debug] [2023-07-08T10:53:29.218Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default) [none]
+[debug] [2023-07-08T10:53:29.536Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default) 200
+[debug] [2023-07-08T10:53:29.536Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default) {"name":"projects/bernadette-stamps/databases/(default)","uid":"a7f324fb-a508-4963-b102-d440350f824b","createTime":"2023-07-08T10:52:31.535330Z","updateTime":"2023-07-08T10:52:31.535330Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2023-07-08T10:52:31.535330Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IKWCzfr4/v8CMOKJ0974/v8C"}
+[debug] [2023-07-08T10:53:29.537Z] database_type: FIRESTORE_NATIVE
+[debug] [2023-07-08T10:53:29.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-08T10:53:29.538Z] > authorizing via signed-in user (jdbellmon.tech@gmail.com)
+[debug] [2023-07-08T10:53:29.538Z] [iam] checking project bernadette-stamps for permissions ["firebase.projects.get"]
+[debug] [2023-07-08T10:53:29.539Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions [none]
+[debug] [2023-07-08T10:53:29.539Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:29.539Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-08T10:53:29.769Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions 200
+[debug] [2023-07-08T10:53:29.770Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-07-08T10:53:33.643Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/releases pageSize=10&pageToken=
+[debug] [2023-07-08T10:53:33.928Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/releases 200
+[debug] [2023-07-08T10:53:33.928Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/releases {"releases":[{"name":"projects/bernadette-stamps/releases/cloud.firestore","rulesetName":"projects/bernadette-stamps/rulesets/c817d3d3-8025-41db-92fb-376bbd8884e8","createTime":"2023-07-08T10:52:33.374318Z","updateTime":"2023-07-08T10:52:33.374318Z"}]}
+[debug] [2023-07-08T10:53:33.929Z] Found ruleset: projects/bernadette-stamps/rulesets/c817d3d3-8025-41db-92fb-376bbd8884e8
+[debug] [2023-07-08T10:53:33.929Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/rulesets/c817d3d3-8025-41db-92fb-376bbd8884e8 [none]
+[debug] [2023-07-08T10:53:34.160Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/rulesets/c817d3d3-8025-41db-92fb-376bbd8884e8 200
+[debug] [2023-07-08T10:53:34.160Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/bernadette-stamps/rulesets/c817d3d3-8025-41db-92fb-376bbd8884e8 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2023-07-08T10:53:37.502Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-07-08T10:53:37.504Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-07-08T10:53:37.795Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-07-08T10:53:37.795Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-07-08T10:53:38.104Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-07-08T10:53:38.105Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/bernadette-stamps/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/bernadette-stamps/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2023-07-08T10:53:38.135Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-08T10:53:38.135Z] > authorizing via signed-in user (jdbellmon.tech@gmail.com)
+[debug] [2023-07-08T10:53:38.136Z] [iam] checking project bernadette-stamps for permissions ["firebase.projects.get"]
+[debug] [2023-07-08T10:53:38.136Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions [none]
+[debug] [2023-07-08T10:53:38.136Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:38.136Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-08T10:53:38.319Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions 200
+[debug] [2023-07-08T10:53:38.320Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bernadette-stamps:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-07-08T10:53:38.320Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-08T10:53:38.322Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:38.325Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-08T10:53:38.326Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:38.751Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-08T10:53:38.751Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2023-07-08T10:53:38.752Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-07-08T10:53:38.752Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:38.796Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-08T10:53:38.796Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-08T10:53:39.868Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-07-08T10:53:39.868Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-07-08T10:53:49.876Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-08T10:53:49.876Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/bernadette-stamps
+[debug] [2023-07-08T10:53:50.286Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-08T10:53:50.286Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/bernadette-stamps/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2023-07-08T10:56:24.613Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-07-08T10:56:24.746Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-07-08T10:56:24.746Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.0.0","browserURL":"https://www.gstatic.com/firebasejs/10.0.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.0.0/firebase.tgz"},"live":{"version":"10.0","browserURL":"https://www.gstatic.com/firebasejs/live/10.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.0.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.0.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.0.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.0.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.0.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.0.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.0.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.0.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at D:\_DEV\bernadette\www\bernadette-stamps 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=509543637&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-07-08T10:56:30.360Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-07-08T10:56:30.361Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-07-08T10:56:30.601Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-07-08T10:56:30.601Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-07-08T10:56:30.612Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-07-08T10:56:30.911Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-07-08T10:56:30.911Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"JDBellmon","id":73689896,"node_id":"MDQ6VXNlcjczNjg5ODk2","avatar_url":"https://avatars.githubusercontent.com/u/73689896?v=4","gravatar_id":"","url":"https://api.github.com/users/JDBellmon","html_url":"https://github.com/JDBellmon","followers_url":"https://api.github.com/users/JDBellmon/followers","following_url":"https://api.github.com/users/JDBellmon/following{/other_user}","gists_url":"https://api.github.com/users/JDBellmon/gists{/gist_id}","starred_url":"https://api.github.com/users/JDBellmon/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/JDBellmon/subscriptions","organizations_url":"https://api.github.com/users/JDBellmon/orgs","repos_url":"https://api.github.com/users/JDBellmon/repos","events_url":"https://api.github.com/users/JDBellmon/events{/privacy}","received_events_url":"https://api.github.com/users/JDBellmon/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":3,"public_gists":0,"followers":0,"following":0,"created_at":"2020-10-30T08:18:28Z","updated_at":"2023-06-22T07:14:15Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":26219,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as JDBellmon 
+[info] 
+[debug] [2023-07-08T11:01:18.596Z] >>> [apiv2][query] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key type=owner
+[debug] [2023-07-08T11:01:18.806Z] <<< [apiv2][status] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key 404
+[debug] [2023-07-08T11:01:18.806Z] <<< [apiv2][body] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-07-08T11:07:28.410Z] >>> [apiv2][query] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key type=owner
+[debug] [2023-07-08T11:07:28.624Z] <<< [apiv2][status] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key 404
+[debug] [2023-07-08T11:07:28.624Z] <<< [apiv2][body] GET https://api.github.com/repos/JDBellmon/bernadette-stamp/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

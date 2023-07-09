@@ -97,8 +97,18 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "bernadette-stamps:build:production"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3112e04e-a699-4639-8c3e-a2e17a55aa0d"
   }
 }

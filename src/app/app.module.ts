@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import { AngularFireModule } from '@angular/fire/compat';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ControllerComponent } from './controller/controller.component';
@@ -39,7 +42,26 @@ import { BlogComponent } from './view/page/blog/blog.component';
 import { TarotComponent } from './view/page/tarot/tarot.component';
 import { ContactComponent } from './view/page/contact/contact.component';
 import { ActiveRouteComponent } from './shared/active-route/active-route.component';
-import { ServiceImageService } from './shared/service-image.service'; // Import your service here
+import { ServiceImageService } from './shared/service-image.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { PartialMainAboutComponent } from './view/partial/partial-main-about/partial-main-about.component';
+import { PartialMainBeautyComponent } from './view/partial/partial-main-beauty/partial-main-beauty.component';
+import { PartialMainBernadetteComponent } from './view/partial/partial-main-bernadette/partial-main-bernadette.component';
+import { PartialMainBlogComponent } from './view/partial/partial-main-blog/partial-main-blog.component';
+import { PartialMainContactComponent } from './view/partial/partial-main-contact/partial-main-contact.component';
+import { PartialMainEntertainerComponent } from './view/partial/partial-main-entertainer/partial-main-entertainer.component';
+import { PartialMainEntrepreneurComponent } from './view/partial/partial-main-entrepreneur/partial-main-entrepreneur.component';
+import { PartialMainEventsComponent } from './view/partial/partial-main-events/partial-main-events.component';
+import { PartialMainFashionComponent } from './view/partial/partial-main-fashion/partial-main-fashion.component';
+import { PartialMainFashionistaComponent } from './view/partial/partial-main-fashionista/partial-main-fashionista.component';
+import { PartialMainGoddessComponent } from './view/partial/partial-main-goddess/partial-main-goddess.component';
+import { PartialMainHomepageComponent } from './view/partial/partial-main-homepage/partial-main-homepage.component';
+import { PartialMainMusicComponent } from './view/partial/partial-main-music/partial-main-music.component';
+import { PartialMainProductsComponent } from './view/partial/partial-main-products/partial-main-products.component';
+import { PartialMainServicesComponent } from './view/partial/partial-main-services/partial-main-services.component';
+import { PartialMainTarotComponent } from './view/partial/partial-main-tarot/partial-main-tarot.component';
 
 @NgModule({
   declarations: [
@@ -80,11 +102,29 @@ import { ServiceImageService } from './shared/service-image.service'; // Import 
     TarotComponent,
     ContactComponent,
     ActiveRouteComponent,
+    PartialMainAboutComponent,
+    PartialMainBeautyComponent,
+    PartialMainBernadetteComponent,
+    PartialMainBlogComponent,
+    PartialMainContactComponent,
+    PartialMainEntertainerComponent,
+    PartialMainEntrepreneurComponent,
+    PartialMainEventsComponent,
+    PartialMainFashionComponent,
+    PartialMainFashionistaComponent,
+    PartialMainGoddessComponent,
+    PartialMainHomepageComponent,
+    PartialMainMusicComponent,
+    PartialMainProductsComponent,
+    PartialMainServicesComponent,
+    PartialMainTarotComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [ServiceImageService], // Add your service to the providers array
   bootstrap: [AppComponent]

@@ -3,9 +3,54 @@
 <!-- Container for the main jumbotron -->
 <div class="jumbotron-container">
     <div class="flex-container">
-        <!-- Use *ngFor to create a flex-item for each link in the links array -->
-        <div *ngFor="let link of links" class="flex-item" [style.background-image]="'url(' + link.backgroundImage + ')'">
-            <a [routerLink]="link.url"></a>
+        <!-- partial-ui-mainjumbotron.component.html -->
+        <!-- Container for the main jumbotron -->
+        <div class="jumbotron-container">
+            <div class="flex-container">
+                <!-- if active route is 'about' show partial-main-about -->
+                <app-partial-main-about *ngIf="activeLink.url === '/about'"></app-partial-main-about>
+
+                <!-- if active route is 'beauty' show partial-main-beauty -->
+                <app-partial-main-beauty *ngIf="activeLink.url === '/beauty'"></app-partial-main-beauty>
+
+                <!-- if active route is 'bernadette' show partial-main-bernadette -->
+                <app-partial-main-bernadette *ngIf="activeLink.url === '/bernadette'"></app-partial-main-bernadette>
+
+                <!-- if active route is 'blog' show partial-main-blog -->
+                <app-partial-main-blog *ngIf="activeLink.url === '/blog'"></app-partial-main-blog>
+
+                <!-- if active route is 'contact' show partial-main-contact -->
+                <app-partial-main-contact *ngIf="activeLink.url === '/contact'"></app-partial-main-contact>
+
+                <!-- if active route is 'entertainer' show partial-main-entertainer -->
+                <app-partial-main-entertainer *ngIf="activeLink.url === '/entertainer'"></app-partial-main-entertainer>
+
+                <!-- if active route is 'fashion' show partial-main-fashion -->
+                <app-partial-main-fashion *ngIf="activeLink.url === '/fashion'"></app-partial-main-fashion>
+
+                <!-- if active route is 'fashionista' show partial-main-fashionista -->
+                <app-partial-main-fashionista *ngIf="activeLink.url === '/fashionista'"></app-partial-main-fashionista>
+
+                <!-- if active route is 'goddess' show partial-main-goddess -->
+                <app-partial-main-goddess *ngIf="activeLink.url === '/goddess'"></app-partial-main-goddess>
+
+                <!-- if active route is 'homepage' show partial-main-homepage -->
+                <app-partial-main-homepage *ngIf="activeLink.url === '/homepage'"></app-partial-main-homepage>
+
+                <!-- if active route is 'music' show partial-main-music -->
+                <app-partial-main-music *ngIf="activeLink.url === '/music'"></app-partial-main-music>
+
+                <!-- if active route is 'products' show partial-main-products -->
+                <app-partial-main-products *ngIf="activeLink.url === '/products'"></app-partial-main-products>
+
+                <!-- if active route is 'services' show partial-main-services -->
+                <app-partial-main-services *ngIf="activeLink.url === '/services'"></app-partial-main-services>
+
+                <!-- if active route is 'tarot' show partial-main-tarot -->
+                <app-partial-main-tarot *ngIf="activeLink.url === '/tarot'"></app-partial-main-tarot>
+            </div>
         </div>
+
+
     </div>
 </div>

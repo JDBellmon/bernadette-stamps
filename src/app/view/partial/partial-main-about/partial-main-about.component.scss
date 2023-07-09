@@ -1,0 +1,25 @@
+/* about.component.scss */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: yellow;
+    color: red;
+    box-shadow: 0 0 10px rgb(100, 0, 0);
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .column-one, .column-two {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row-one, .row-two, .row-three, .row-four {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
